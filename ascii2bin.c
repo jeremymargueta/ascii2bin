@@ -1,7 +1,15 @@
+#include "stdio.h"
+#include "stdlib.h"
+#include <unistd.h>
+#include <sys/types.h>
+
+#define max_int (255)
+#define byte unsigned char
+
 int main (int argc, char * argv[], char ** envp)
 {
     int offset = 0x30;
-    char ascii_value;
+    byte ascii_value;
     int number = 0;
     int digit;
     
