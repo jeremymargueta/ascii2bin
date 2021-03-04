@@ -23,8 +23,8 @@ int main (int argc, char * argv[], char ** envp)
     //     return 1;
     // }
 
-    fprintf(stderr, "Error Detected!\n");
-     printf("%u\n", retval);
+    // fprintf(stderr, "Error Detected!\n");
+    //  printf("%u\n", retval);
     
 
     while (retval == 1)
