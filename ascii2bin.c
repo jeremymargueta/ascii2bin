@@ -8,7 +8,7 @@
 
 int main (int argc, char * argv[], char ** envp)
 {
-    int offset = 0x30;
+    int offset = 48;
     byte ascii_value;
     int number = 0;
     int digit;
@@ -16,16 +16,6 @@ int main (int argc, char * argv[], char ** envp)
 
    
     retval = read(0, &ascii_value, 1);
-
-    //  if(retval != 0 || retval != 1)
-    // {
-    //     fprintf(stderr, "Error Detected!\n"); 
-    //     return 1;
-    // }
-
-    // fprintf(stderr, "Error Detected!\n");
-    //  printf("%u\n", retval);
-    
 
     while (retval == 1)
     {
