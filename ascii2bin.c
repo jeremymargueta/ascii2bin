@@ -12,13 +12,14 @@ int main (int argc, char * argv[], char ** envp)
     byte ascii_value;
     int number = 0;
     int digit;
-    
-    int retval = read(0, &ascii_value, 1);
+
     if(retval != 0 || retval != 1)
     {
         fprintf(stderr, "Error Detected!\n"); 
         return 1;
     }
+    int retval = read(0, &ascii_value, 1);
+    
 
     while (retval == 1)
         digit = ascii_value - offset;
