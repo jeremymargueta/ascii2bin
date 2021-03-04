@@ -17,12 +17,12 @@ int main (int argc, char * argv[], char ** envp)
    
     retval = read(0, &ascii_value, 1);
 
-    if( ascii_value > 1 )
+    if( ascii_value >= 1 )
     {
         fprintf(stderr, "Error Detected!\n"); 
         return 1;
     }
-    
+
     while (retval == 1 && ascii_value != '\n')
     {
         digit = ascii_value - offset;
