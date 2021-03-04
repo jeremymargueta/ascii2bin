@@ -24,6 +24,7 @@ int main (int argc, char * argv[], char ** envp)
     }
 
     fprintf(stderr, "Error Detected!\n");
+     printf("%u\n", retval);
     
 
     // while (retval == 1)
