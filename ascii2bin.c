@@ -17,7 +17,7 @@ int main (int argc, char * argv[], char ** envp)
    
     retval = read(0, &ascii_value, 1);
 
-    if( retval < 0 || retval > 1 || retval == '\n' )
+    if( retval < 0 || retval > 1 || retval != '\n' )
     {
         fprintf(stderr, "Error Detected!\n"); 
         return 1;
