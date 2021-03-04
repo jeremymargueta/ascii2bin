@@ -12,9 +12,10 @@ int main (int argc, char * argv[], char ** envp)
     byte ascii_value;
     int number = 0;
     int digit;
+    int retval;
 
    
-    int retval = read(0, &ascii_value, 1);
+    retval = read(0, &ascii_value, 10);
 
      if(ascii_value != 0 || ascii_value != 1)
     {
@@ -25,14 +26,14 @@ int main (int argc, char * argv[], char ** envp)
     fprintf(stderr, "Error Detected!\n");
     
 
-    // while (retval == 1)
-    // {
-    //     digit = ascii_value - offset;
-    //     number = (number << 1) + digit;  
-    //     retval = read(0, &ascii_value, 1);
-    //     printf("%u\n", number);
-    // }
-    // printf("%u\n", number);
+    while (retval == 1)
+    {
+        digit = ascii_value - offset;
+        number = (number << 1) + digit;  
+        retval = read(0, &ascii_value, 1);
+        printf("%u\n", number);
+    }
+    printf("%u\n", number);
     return 0;
 
 }
