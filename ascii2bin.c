@@ -27,7 +27,7 @@ int main (int argc, char * argv[], char ** envp)
     {
         digit = ascii_value - offset;
         number = (number << 1) + digit; 
-         if( retval > 2^32 )
+         if( number > 2^32 )
         {
             fprintf(stderr, "Error Detected!\n"); 
             return 1;
