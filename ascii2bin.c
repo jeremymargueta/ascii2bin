@@ -20,9 +20,11 @@ int main (int argc, char * argv[], char ** envp)
     while (retval == 1 && ascii_value != '\n')
     {
         digit = ascii_value - offset;
-        number = (number << 1) + digit;  
+        if( number == 0 || number == 1)
+        {
+            number = (number << 1) + digit;  
+        }
         retval = read(0, &ascii_value, 1);
-        //printf("%u\n", number);
     }
     printf("%u\n", number);
     return 0;
