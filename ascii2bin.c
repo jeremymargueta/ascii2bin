@@ -17,11 +17,11 @@ int main (int argc, char * argv[], char ** envp)
    
     retval = read(0, &ascii_value, 1);
 
-     if(retval != 0 || retval != 1)
-    {
-        fprintf(stderr, "Error Detected!\n"); 
-        return 1;
-    }
+    //  if(retval != 0 || retval != 1)
+    // {
+    //     fprintf(stderr, "Error Detected!\n"); 
+    //     return 1;
+    // }
 
     fprintf(stderr, "Error Detected!\n");
      printf("%u\n", retval);
