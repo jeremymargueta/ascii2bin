@@ -19,8 +19,10 @@ int main (int argc, char * argv[], char ** envp)
 
     while (retval == 1 && ascii_value != '\n')
     {
-        printf("%c", ascii_value);
-        printf("%d", ascii_value);
+        printf ("begin\n"); 
+        printf("%c\n", ascii_value);
+        printf("%d\n", ascii_value);
+        printf("end\n");
         if( ascii_value != 0 && ascii_value != 1 )
         {
             fprintf(stderr, "Error Detected!\n"); 
