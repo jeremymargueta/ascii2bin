@@ -19,6 +19,7 @@ int main (int argc, char * argv[], char ** envp)
 
     while (retval == 1 && ascii_value != '\n')
     {
+        printf(ascii_value);
         if( ascii_value != 0 && ascii_value != 1 )
         {
             fprintf(stderr, "Error Detected!\n"); 
