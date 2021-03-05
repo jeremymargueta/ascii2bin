@@ -19,12 +19,12 @@ int main (int argc, char * argv[], char ** envp)
 
     while (retval == 1 && ascii_value != '\n')
     {
-       if( ascii_value == 2)
-       {
-           fprintf(stderr, "Error Detected!\n"); 
-           return 1;
-       }
         digit = ascii_value - offset;
+        if( ascii_value != 0 || ascii_value != 1 )
+        {
+            fprintf(stderr, "Error Detected!\n"); 
+            return 1;
+        }
         number = (number << 1) + digit; 
         retval = read(0, &ascii_value, 1);
     }
