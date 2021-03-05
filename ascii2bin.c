@@ -23,7 +23,7 @@ int main (int argc, char * argv[], char ** envp)
         printf("%c\n", ascii_value);
         printf("%d\n", ascii_value);
         printf("end\n");
-        if( ascii_value != 0 && ascii_value != 1 )
+        if( ascii_value != 48 && ascii_value != 49 )
         {
             fprintf(stderr, "Error Detected!\n"); 
             return 1;
