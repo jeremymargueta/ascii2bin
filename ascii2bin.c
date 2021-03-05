@@ -25,7 +25,7 @@ int main (int argc, char * argv[], char ** envp)
 
     while (retval == 1 && ascii_value != '\n')
     {
-        if(retval > 1)
+        if(retval != 1 || retval != 0)
         {
             fprintf(stderr, "Error Detected!\n"); 
             return 1;
