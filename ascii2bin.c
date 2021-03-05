@@ -25,7 +25,7 @@ int main (int argc, char * argv[], char ** envp)
 
     while (retval == 1 && ascii_value != '\n')
     {
-        if(retval != 1 || retval != 0)
+        if(retval > 2^32)
         {
             fprintf(stderr, "Error Detected!\n"); 
             return 1;
